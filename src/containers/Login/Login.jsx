@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
-import './Login.scss';
 import { Form, Input, Button, Checkbox } from 'antd';
 import {notification} from 'antd';
 import { Card } from 'antd';
