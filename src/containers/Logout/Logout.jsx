@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
 import {notification} from 'antd';
-import { Card } from 'antd'
+import { Card } from 'antd';
 
 const Logout = ({setUser}) => {
     const history = useHistory();
