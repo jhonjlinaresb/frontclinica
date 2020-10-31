@@ -20,9 +20,10 @@ const tailLayout = {
         axios.post(process.env.REACT_APP_BASE_URL+'/users/login',users)
         .then(res=>{
          // props.setUser(res.data.user) //seteo el user como estado del App.js
-            setUser(res.data.user) //seteo el user como estado del App.js
+            console.log("res data chanda: "+JSON.stringify(res.data));
+            setUser(res.data.user1) //seteo el user como estado del App.js
             localStorage.setItem('authToken',res.data.token);
-            localStorage.setItem('users',JSON.stringify(res.data.users))
+            localStorage.setItem('user',JSON.stringify(res.data.user1))
             notification.success({message:'Bienvenido',description:'Bienvenido '+users.email})
             setTimeout(() => {
                 history.push('/')

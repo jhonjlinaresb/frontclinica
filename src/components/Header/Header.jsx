@@ -13,6 +13,7 @@ import './Header.scss';
         <header className="header">
             <Link to="/">Home</Link>
             {/* {props.user ? */}
+            {console.log(user)}
             {user ?
                 <div className="loggedIn">
                 {['admin'].includes(user.role) &&<Link to="/users">users</Link> }
@@ -23,7 +24,6 @@ import './Header.scss';
                 <div className="notLoggedIn">
                     <Link to="/login">Login</Link>
                     <Link to="/register">Registro</Link>
-                    <Link to="/logout">Logout</Link>
                 </div>}
 
         </header>

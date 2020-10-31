@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
 import {notification} from 'antd';
@@ -32,4 +32,4 @@ return(
     </div>
   );}
 
-export default Logout;
+export default Logout; */
