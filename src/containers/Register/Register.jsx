@@ -54,7 +54,8 @@ const Register = () => {
                 ]}
             >
                 <Input />
-            </Form.Item>
+                </Form.Item>
+
             <Form.Item
                 label="Email"
                 name="email"
@@ -87,6 +88,19 @@ const Register = () => {
                 ]}
             >
                 <Input.Password />
+            </Form.Item>
+
+            <Form.Item
+                label="DNI"
+                name="dni"
+                rules={[
+                    {
+                        required: true,
+                        message: 'Por favor introduzca su DNI...',
+                    },
+                ]}
+                >
+            <Input />
             </Form.Item>
 
             <Form.Item {...tailLayout}>

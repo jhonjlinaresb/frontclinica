@@ -23,7 +23,7 @@ import './Header.scss';
                 </div> :
                 <div className="notLoggedIn">
                     <Link to="/login">Login</Link>
-                    <Link to="/register">Registro</Link>
+                    <Link to="/register">Register</Link>
                 </div>}
 
         </header>

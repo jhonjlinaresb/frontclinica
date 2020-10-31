@@ -26,7 +26,7 @@ const tailLayout = {
             localStorage.setItem('user',JSON.stringify(res.data.user1))
             notification.success({message:'Bienvenido',description:'Bienvenido '+users.email})
             setTimeout(() => {
-                history.push('/')
+                history.push('/profile')
             }, 1000);
         })
         .catch(error=>console.log(error))
