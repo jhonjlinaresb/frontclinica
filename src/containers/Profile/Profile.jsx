@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom'
+//import { Link, Redirect } from 'react-router-dom'
 import { Layout } from 'antd';
 import { Form, Input, Button, notification } from 'antd';
 import { Card } from 'antd';

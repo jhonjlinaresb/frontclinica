@@ -26,7 +26,7 @@ function App() {
   const [user, setUser] = useState(initialUser);
   useEffect(() => {
     const token = localStorage.getItem('authToken')
-    axios.get(process.env.REACT_APP_BASE_URL + '/users/profile',
+    axios.get(process.env.REACT_APP_BASE_URL + '/users',
       {
         headers: {
           Authorization: token
