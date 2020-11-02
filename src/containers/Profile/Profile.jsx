@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { Layout } from 'antd';
 import { Form, Input, Button, notification } from 'antd';
 import { Card } from 'antd';
@@ -7,7 +7,7 @@ import { DatePicker } from 'antd';
 import axios from 'axios';
 
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Sider, Content } = Layout;
 
 const layout = {
   labelCol: {
@@ -51,8 +51,18 @@ const Profile = ({ user }) => {
       <>
     <Layout>
       <Header><h1 style={{ textAlign: 'center', display: 'flex', justifyContent: 'center', color: 'white' }}>Bienvenido {user.email}</h1></Header>
-      <Content>
+
+      <sider style={{background: 'cian'}}>Sider
+        <Button type="primary" htmlType="submit">
+                 Anular Citas
+        </Button>
+        <Button type="primary" htmlType="submit">
+                  <a link href="http://localhost:3001/users/:dni/appoinments" >Ver Citas</a>
+        </Button>
+      </sider>
+
       <div className="site-card-border-less-wrapper" style={{ textAlign: 'center', display: 'flex', padding: '30px', justifyContent: 'center'}}>
+      <Content style={{display: 'flex', justifyContent: 'center'}}>
        <Card title="Pedir cita" bordered={false} style={{ width: 300, textAlign: 'center' }}>
         <Form
             {...layout}
@@ -66,12 +76,12 @@ const Profile = ({ user }) => {
         >
 
             <Form.Item
-                label="Tipo de cita"
+                label="Estado"
                 name="status"
                 rules={[
                     {
                         required: true,
-                        message: '¿Qué tipo de cita desea?',
+                        message: 'Estado',
                     },
                 ]}
             >
@@ -119,14 +129,15 @@ const Profile = ({ user }) => {
 
             <Form.Item {...tailLayout}>
                 <Button type="primary" htmlType="submit">
-                    Submit
+                    Create
         </Button>
             </Form.Item>
             
         </Form>
         </Card>
-        </div>
+        
       </Content>
+        </div>
     </Layout>
   </>
 );
