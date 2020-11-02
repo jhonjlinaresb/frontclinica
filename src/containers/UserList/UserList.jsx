@@ -2,14 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Table, Space } from 'antd';
 
-const Users = (userList) => {
-    let users = {
-        '_id': userList._id,
-        'email':userList.email,
-        'dni': userList.dni
-    }
-    console.log('appointment: '+JSON.stringify(users));
-    const [user, setUsers] = useState([]);
+const Users = () => {
+    const [users, setUsers] = useState([]);
     useEffect(() => {
         //const token = localStorage.getItem('authToken');
         axios.get(process.env.REACT_APP_BASE_URL+'/users',{
@@ -22,11 +16,6 @@ const Users = (userList) => {
 const { Column, ColumnGroup } = Table;
 
 const data = [
-  {
-    "_id" : users._id,
-    "email" : users.email,
-    "dni" : users.dni
-  },
   {
     "_id" : users._id,
     "email" : users.email,
