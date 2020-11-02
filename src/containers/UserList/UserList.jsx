@@ -6,7 +6,7 @@ const Users = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
         //const token = localStorage.getItem('authToken');
-        axios.get(process.env.REACT_APP_BASE_URL+'/users',{
+        axios.get(process.env.REACT_APP_BASE_URL+'/users/showAll',{
             
         }).then(res=>setUsers(res.data));
     }, [])
@@ -15,27 +15,16 @@ const Users = () => {
 
 const { Column, ColumnGroup } = Table;
 
-const data = [
-  {
-    "_id" : users._id,
-    "email" : users.email,
-    "dni" : users.dni
-  },
-  {
-    "_id" : users._id,
-    "email" : users.email,
-    "dni" : users.dni
-  },
-];
+
 
 return(
     
-  <Table dataSource={data}>
+  <Table dataSource={users}>
     <ColumnGroup title="User List">
-      <Column title="id" dataIndex="id" key={user._id} />
+      <Column title="id" dataIndex="id" key='_id' />
     </ColumnGroup>
-    <Column title="Email" dataIndex="email" key={user.email} />
-    <Column title="DNI" dataIndex="dni" key={user.dni} />
+    <Column title="Email" dataIndex="email" key='email' />
+    <Column title="DNI" dataIndex="dni" key='dni' />
     
     <Column
       title="Action"
