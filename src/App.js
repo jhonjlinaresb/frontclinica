@@ -45,7 +45,7 @@ function App() {
         <Route path='/login' exact ><Login setUser={setUser} /></Route>
         <Route path='/register' component={Register} exact />
         <PrivateZone user={user}>
-        <CheckPrivileges user={user} roles={['admin']}>
+        <CheckPrivileges user={user} roles={['admin', 'client']}>
         <Route path='/profile' exact><Profile user={user} /></Route>
         </CheckPrivileges>
         <Route path='/users' component={UserList} exact />

@@ -52,17 +52,18 @@ const Profile = ({ user }) => {
     <Layout>
       <Header><h1 style={{ textAlign: 'center', display: 'flex', justifyContent: 'center', color: 'white' }}>Bienvenido {user.email}</h1></Header>
 
-      <sider style={{background: 'cian'}}>Sider
+       <Layout>
+       <Content style={{display: 'flex', justifyContent: 'center'}}>
+      <div className="site-card-border-less-wrapper" style={{ textAlign: 'center', display: 'flex', padding: '30px', justifyContent: 'center'}}>
+      <Sider style={{display: 'flex', padding: '2px', justifyContent: 'center', textAlign: 'center' }}>
         <Button type="primary" htmlType="submit">
                  Anular Citas
         </Button>
         <Button type="primary" htmlType="submit">
                   <a link href="http://localhost:3001/users/:dni/appoinments" >Ver Citas</a>
         </Button>
-      </sider>
-
-      <div className="site-card-border-less-wrapper" style={{ textAlign: 'center', display: 'flex', padding: '30px', justifyContent: 'center'}}>
-      <Content style={{display: 'flex', justifyContent: 'center'}}>
+      </Sider>
+      
        <Card title="Pedir cita" bordered={false} style={{ width: 300, textAlign: 'center' }}>
         <Form
             {...layout}
@@ -136,8 +137,10 @@ const Profile = ({ user }) => {
         </Form>
         </Card>
         
-      </Content>
+      
         </div>
+        </Content>
+        </Layout>
     </Layout>
   </>
 );
