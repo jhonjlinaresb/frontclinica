@@ -14,4 +14,9 @@ const Appointments = (props) => {
             console.error(error);
         }
     },[])
+    return(
+        <div>
+            {appointments.map(apointment)} => 
+        </div>
+    )
 }
