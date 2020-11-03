@@ -23,7 +23,6 @@ return(
     <ColumnGroup title="User List">
       <Column title="id" dataIndex="id" key='_id' />
     </ColumnGroup>
-    <Column title="id" dataIndex="id" key='_id' />
     <Column title="Email" dataIndex="email" key='email' />
     <Column title="DNI" dataIndex="dni" key='dni' />
     

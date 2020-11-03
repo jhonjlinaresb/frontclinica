@@ -10,6 +10,7 @@ import 'antd/dist/antd.css';
 import Register from './containers/Register/Register';
 import axios from 'axios';
 import Profile from './containers/Profile/Profile';
+import Appointments from './containers/Appointments/Appointments';
 import PrivateZone from './guards/PrivateZone';
 import Error404 from './containers/Error404/Error404.jsx';
 import UserList from './containers/UserList/UserList';
@@ -48,6 +49,7 @@ function App() {
         <CheckPrivileges user={user} roles={['admin', 'client']}>
         <Route path='/profile' exact><Profile user={user} /></Route>
         </CheckPrivileges>
+        <Route path='/appointments' exact><Appointments user={user} /></Route>
         <Route path='/users' component={UserList} exact />
         </PrivateZone>
         <Route path='/*' component={Error404} exact />

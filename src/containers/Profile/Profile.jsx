@@ -1,5 +1,5 @@
 import React from 'react';
-//import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { Layout } from 'antd';
 import { Form, Input, Button, notification } from 'antd';
 import { Card } from 'antd';
@@ -56,11 +56,10 @@ const Profile = ({ user }) => {
        <Content style={{display: 'flex', justifyContent: 'center'}}>
       <div className="site-card-border-less-wrapper" style={{ textAlign: 'center', display: 'flex', padding: '30px', justifyContent: 'center'}}>
       <Sider style={{display: 'flex', padding: '2px', justifyContent: 'center', textAlign: 'center' }}>
+        
         <Button type="primary" htmlType="submit">
-                 Anular Citas
-        </Button>
-        <Button type="primary" htmlType="submit">
-                  <a link href="http://localhost:3001/users/:dni/appoinments" >Ver Citas</a>
+                  
+                  <Link to='/appointments'>Cites</Link>
         </Button>
       </Sider>
       
