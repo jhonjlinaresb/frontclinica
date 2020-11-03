@@ -57,9 +57,9 @@ const Profile = ({ user }) => {
       <div className="site-card-border-less-wrapper" style={{ textAlign: 'center', display: 'flex', padding: '30px', justifyContent: 'center'}}>
       <Sider style={{display: 'flex', padding: '2px', justifyContent: 'center', textAlign: 'center' }}>
         
-        <Button type="primary" htmlType="submit">
+        <Button style={{textAlign: 'center', display: 'flex', justifyContent: 'center', padding: '20px', margin: '10em'}} type="primary" htmlType="submit">
                   
-                  <Link to='/appointments'>Cites</Link>
+                  <Link style={{textAlign: 'center', display: 'flex', justifyContent: 'center', margin: '-0.6em'}} to='/appointments'>Citas</Link>
         </Button>
       </Sider>
       
@@ -89,7 +89,7 @@ const Profile = ({ user }) => {
                 </Form.Item>
 
                 <Form.Item
-                label="Observaciones"
+                label="Servicio"
                 name="observations"
                 rules={[
                     {

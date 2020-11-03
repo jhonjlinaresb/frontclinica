@@ -15,8 +15,9 @@ const Appointments = (user) => {
         
     }, [])
     
-const deleteAppointment = (user) => {
-    axios.delete(process.env.REACT_APP_BASE_URL+'/users'+user.user.dni+'appointments',{})
+const deleteAppointment = (dni) => {
+  console.log(dni);
+    axios.delete(process.env.REACT_APP_BASE_URL+'/users/'+dni+'/appoinments',{})
     .then(res=>setAppointments(res.data.appointment));
 }
 
@@ -42,7 +43,7 @@ return(
     <Column
       title="Action"
       key="action"
-      render={() => (
+      render={(dni) => (
         <Space size="middle">
           <a onClick={() => deleteAppointment(user.user.dni)}>Delete</a>
         </Space>
