@@ -42,14 +42,17 @@ function App() {
     
       <Header user={user} setUser={setUser} />
       <Switch>
+        <Route path='/profile' exact><Profile user={user} /></Route>
+        <Route path='/appointments' exact><Appointments user={user} /></Route>
         <Route path='/' component={Home} exact />
         <Route path='/login' exact ><Login setUser={setUser} /></Route>
         <Route path='/register' component={Register} exact />
         <PrivateZone user={user}>
+        
         <CheckPrivileges user={user} roles={['admin', 'client']}>
-        <Route path='/profile' exact><Profile user={user} /></Route>
+        
         </CheckPrivileges>
-        <Route path='/appointments' exact><Appointments user={user} /></Route>
+        
         <Route path='/users' component={UserList} exact />
         </PrivateZone>
         <Route path='/*' component={Error404} exact />

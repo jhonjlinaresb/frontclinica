@@ -50,7 +50,7 @@ const Profile = ({ user }) => {
     return (
       <>
     <Layout>
-      <Header><h1 style={{ textAlign: 'center', display: 'flex', justifyContent: 'center', color: 'white' }}>Bienvenido {user.email}</h1></Header>
+      <Header><h1 style={{ textAlign: 'center', display: 'flex', justifyContent: 'center', color: 'white' }}>Bienvenido {user?.email}</h1></Header>
 
        <Layout>
        <Content style={{display: 'flex', justifyContent: 'center'}}>

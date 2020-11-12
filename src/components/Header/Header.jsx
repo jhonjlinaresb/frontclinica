@@ -18,8 +18,8 @@ import './Header.scss';
                 <div className="loggedIn">
                     {['admin'].includes(user.role) &&<Link to="/users">users</Link> }
                     {/* {['doctores','becarios'].includes(user.role) &&<Link to="/pacientes">pacientes</Link> } */}
-                    <Link to="/profile">{user.email} - {user.role}Profile</Link>
-                    <span className="logout" onClick={logout}>Logout</span>
+                    <Link to="/profile">{user?.email} - {user?.role}Profile</Link>
+                    <a href="/" ><span className="logout" onClick={logout}>Logout</span></a>
                 </div> :
                 <div className="notLoggedIn">
                     <Link to="/login">Login</Link>
